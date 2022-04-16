@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class PassFail {
+
+    public static void main (String [] arg) {
+        // 6 adet ders notu kullanıcıdan alınacak bu notların ortalaması hesaplanıp 60 sınırı ile geçti kaldı testi
+        //yapılacak
+
+        Scanner enter = new Scanner(System.in);
+
+        int mat, fizik, kimya, biyoloji, ingilizce, turkce;
+        //derslerin notlarının tutulduğu değişkenler
+
+        int sum;   // notların toplamı
+
+        double avr;  // kıyas edilecek değer
+
+
+
+        System.out.println("Welcome to pass or fail test program!");
+
+        System.out.print("Please Enter Math exam result: ");
+
+        mat = enter.nextInt();
+
+        System.out.print("Please Enter Physics exam result: ");
+
+        fizik = enter.nextInt();
+
+        System.out.print("Please Enter Chemical exam result: ");
+
+        kimya = enter.nextInt();
+
+        System.out.print("Please Enter Biology exam result: ");
+
+        biyoloji = enter.nextInt();
+
+        System.out.print("Please Enter English exam result: ");
+
+        ingilizce = enter.nextInt();
+
+        System.out.print("Please Enter Turkish exam result: ");
+
+        turkce = enter.nextInt();
+
+        System.out.println("Your Math exam result is  " + mat);
+
+        System.out.println("Your Physics exam result is  " + fizik);
+
+        System.out.println("Your Chemical exam result is  " + kimya);
+
+        System.out.println("Your Biology exam result is  " + biyoloji);
+
+        System.out.println("Your English exam result is  " + ingilizce);
+
+        System.out.println("Your Turkish exam result is  " + turkce);
+
+        sum = mat + fizik + kimya + biyoloji + ingilizce + turkce;
+
+        System.out.println("Sum of your exam result is  " + sum);
+
+        avr = sum / 6.0;
+
+        System.out.println("Your exam results average is  " + avr);
+
+        String result = avr >=60 ? "Congratulations! You pass the class" : "You are failed! See you next season !";
+
+        System.out.println(result);
+
+
+
+
+    }
+}
